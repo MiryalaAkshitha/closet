@@ -1,0 +1,31 @@
+.collection-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.collection-img {
+  max-width: 18.75rem;
+  max-height: 18.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.3rem;
+
+}
+.collection-card-wrapper{
+  position:relative;
+}
+.best-seller{
+  position:absolute;
+background-color: #512e4f;
+  top:1.25rem;
+  left:-1.25rem;
+  color:white;
+  padding:5px;
+  border-radius:0.2rem;
+} 
+
+
+
+

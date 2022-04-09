@@ -1,0 +1,57 @@
+.category-container {
+  margin:50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:1.25rem;
+}
+.category-img {
+  border-left:1.25rem;
+  border-right:1.25rem;
+  width: 90vw;
+  height:70vh;
+  border-radius: 0.5rem;
+}
+.kurthi-btn,
+.dresses-btn,
+.tops-btn {
+  border: none;
+  border: 3px solid #512e4f;
+  font-size: 1.25rem;
+  padding: 1.25rem;
+  position: absolute;
+  right: 90px;
+  top: 50px;
+  text-transform: uppercase;
+}
+.kurthi-btn:hover,
+.dresses-btn:hover,
+.tops-btn:hover {
+  background-color: #512e4f;
+  color: white;
+}
+.kurthi-img-wrapper {
+  position: relative;
+}
+.dresses-img-wrapper {
+  position: relative;
+}
+.tops-img-wrapper {
+  position: relative;
+}
+ @media only screen and (max-width: 500px) { 
+  .kurthi-btn,
+  .dresses-btn,
+  .tops-btn {
+    padding: 5px;
+    right:50px;
+    top: 40px;
+    text-transform: lowercase;
+    
+  }
+  .category-img{
+    width:100vw;
+    height:50vh;
+  }
+}

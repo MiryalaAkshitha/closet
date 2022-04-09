@@ -1,0 +1,29 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+}
+.hero-img {
+  min-width: 80%;
+  max-height: 70%;
+  margin: 30px 10px 30px 10px;
+  border-radius: 0.3rem;
+}
+.hero-btn {
+  padding: 1.25rem;
+  position: absolute;
+  bottom:50px;
+  border: none;
+  background-color: #512e4f;
+  color: white;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 500px) {
+  .hero-btn {
+    bottom: 30px;
+    padding:0.625rem;
+  }
+}
+  
+
