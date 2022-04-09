@@ -1,10 +1,8 @@
 import "./App.css";
-
+import { Homepage } from "./pages/Homepage.js";
 
 function App() {
-  return (
-    <h2>HELLO FROM MY CLOSET</h2>
-  );
+  return <Homepage />;
 }
 
 export default App;

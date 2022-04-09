@@ -1,0 +1,64 @@
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  width: 100%;
+  margin: 0.625rem;
+  padding: 0.625rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow:0px 0px 0.625rem 0px rgba(0,0,0,0.75);
+  
+
+}
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  padding: 0.625rem;
+  font-size:var(--md);
+  font-weight: var(--font-bold);
+  color:var(--primary-color);
+}
+
+.nav-input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding:0.625rem;
+  text-decoration: none;
+  min-width: 18.75rem;
+  color:var(--primary-color);
+  font-weight:var(--font-bold);
+}
+.nav-input::placeholder {
+  color: var(--primary-color);
+  font-weight: var(--font-bold);
+}
+.avatar{
+    border-radius:50%;
+    height:var(--lg);
+    width:var(--lg);
+}
+.wishlist-icon{
+    color:var(--primary-color);
+}
+.nav-login{
+    font-size:1.25rem;
+    font-weight:var(--font-bold);
+    padding-bottom:5px;
+}
+.nav-login:hover{
+    border-bottom: 2px solid var(--primary-color);
+}
