@@ -1,13 +1,16 @@
 @import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);
-
 :root{
-  --primary-color:var(red);
-  --text-color:var(white);
-  --xs:var(0.625rem);
-  --s:var(1.25rem);
-  --m:var(2rem);
-  --l:var(3.125rem);
-  --bold:var(bold);
+  --primary-color:#512e4f;
+  --text-color:white;
+  --xs:0.625rem;
+  --sm:1.25rem;
+  --md:2rem;
+  --lg:3.125rem;
+  --font-light: 300;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold:bold;
   
 
 }
+

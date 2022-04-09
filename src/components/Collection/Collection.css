@@ -18,10 +18,10 @@
 }
 .best-seller{
   position:absolute;
-background-color: #512e4f;
+background-color: var(--primary-color);
   top:1.25rem;
   left:-1.25rem;
-  color:white;
+  color:var(--text-color);
   padding:5px;
   border-radius:0.2rem;
 } 

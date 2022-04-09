@@ -27,38 +27,38 @@
 
 .title {
   padding: 0.625rem;
-  font-size: 30px;
-  font-weight: bold;
-  color:#512e4f;
+  font-size:var(--md);
+  font-weight: var(--font-bold);
+  color:var(--primary-color);
 }
 
 .nav-input {
   outline: none;
   border: none;
-  border-bottom: 2px solid #512e4f;
+  border-bottom: 2px solid var(--primary-color);
   padding:0.625rem;
   text-decoration: none;
-  min-width: 300px;
-  color:#512e4f;
-  font-weight:bold;
+  min-width: 18.75rem;
+  color:var(--primary-color);
+  font-weight:var(--font-bold);
 }
 .nav-input::placeholder {
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: var(--font-bold);
 }
 .avatar{
     border-radius:50%;
-    height:50px;
-    width:50px;
+    height:var(--lg);
+    width:var(--lg);
 }
 .wishlist-icon{
-    color:#512e4f;
+    color:var(--primary-color);
 }
 .nav-login{
     font-size:1.25rem;
-    font-weight:bold;
+    font-weight:var(--font-bold);
     padding-bottom:5px;
 }
 .nav-login:hover{
-    border-bottom: 2px solid #512e4f;
+    border-bottom: 2px solid var(--primary-color);
 }

@@ -1,5 +1,5 @@
 .category-container {
-  margin:50px;
+  margin:var(--lg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,19 +17,19 @@
 .dresses-btn,
 .tops-btn {
   border: none;
-  border: 3px solid #512e4f;
+  border: 3px solid var(--primary-color);
   font-size: 1.25rem;
   padding: 1.25rem;
   position: absolute;
   right: 90px;
-  top: 50px;
+  top: var(--lg);
   text-transform: uppercase;
 }
 .kurthi-btn:hover,
 .dresses-btn:hover,
 .tops-btn:hover {
-  background-color: #512e4f;
-  color: white;
+  background-color:var(--primary-color);
+  color: var(--text-color);
 }
 .kurthi-img-wrapper {
   position: relative;
