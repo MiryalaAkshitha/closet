@@ -1,0 +1,41 @@
+.filter-wrapper{
+    width:500px;
+    padding:20px;
+    margin:10px;
+
+}
+.filter-headings{
+    display:flex;
+    justify-content: space-between;
+}
+.filter-title{
+    font-size:1.25rem;
+    font-weight:var(--font-bold);
+    color:var(--primary-color);
+}
+.filter-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin:10px;
+}
+input{
+    accent-color: var(--primary-color);
+}
+
+.filter-subtitle{
+    font-size:1rem;
+    font-weight:700;
+    color:var(--primary-color);
+}
+.filter-clr-btn{
+    background-color:var(--primary-color);
+    color:var(--text-color);
+    border:none;
+    border-radius:0.2rem;
+    padding:10px;
+    font-size:1rem;
+    font-weight:400;
+}
+
+    

@@ -1,5 +1,10 @@
 import "../Category/Category.css";
+
+import { useProduct } from "../../context/Productcontext";
+
 export const Category = () => {
+    const { productState, productDispatch } = useProduct();
+
   return (
     <div className="category-container">
       <div className="kurthi-img-wrapper">
@@ -8,7 +13,12 @@ export const Category = () => {
           src="https://www.signaturekesavi.com/wp-content/uploads/2020/10/5-banner-2-1200x700.jpg"
           alt="image"
         />
-        <button className="kurthi-btn">Shop Kurthis</button>
+      
+        <button
+          className="kurthi-btn">
+          Shop Kurthis
+        </button>
+      
       </div>
       <div className="dresses-img-wrapper">
         <img

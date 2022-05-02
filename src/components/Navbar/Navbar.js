@@ -7,6 +7,7 @@ export const Navbar=()=>{
       <div className="nav-container">
         <nav className="nav-wrapper">
           <div className="title">CLOSET !!</div>
+          {/* <i className="fas fa-bars drop-down"></i> */}
           <div className="nav-pills">
             <input
               className="nav-input"
@@ -14,13 +15,14 @@ export const Navbar=()=>{
               placeholder="what are you searching for ?"
             />
             {/* <i class="fas fa-search"></i>  */}
-            <i className="wishlist-icon" class="fas fa-2x fa-heart"></i>
-            <i className="bag-icon" class="fas fa-2x fa-shopping-bag"></i>
+            <i className="wishlist-icon fas fa-2x fa-heart"></i>
+            <i className="bag-icon fas fa-2x fa-shopping-bag"></i>
+            <div className="nav-login">login</div>
+
             <img
               className="avatar"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR332niECXQzBEG3rRciWHTZ0e8IrpaeiMwMA&usqp=CAU"
             />
-            <div className="nav-login">login</div>
           </div>
         </nav>
       </div>
