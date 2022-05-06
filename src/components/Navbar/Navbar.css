@@ -4,6 +4,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .nav-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +43,7 @@
   color:var(--primary-color);
   font-weight:var(--font-bold);
 }
+
 .nav-input::placeholder {
   color: var(--primary-color);
   font-weight: var(--font-bold);
@@ -51,11 +53,11 @@
     height:var(--lg);
     width:var(--lg);
 }
-.wishlist-icon{
+.wishlist-icon, .bag-icon{
     color:var(--primary-color);
 }
 .nav-login{
-    font-size:1.25rem;
+    font-size:1.5rem;
     font-weight:var(--font-bold);
     padding-bottom:5px;
 }

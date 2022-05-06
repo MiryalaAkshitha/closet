@@ -10,7 +10,7 @@
   margin: var(--md) var(--xs) var(--md) var(--xs);
   border-radius: 0.3rem;
 }
-.hero-btn {
+.hero-btn  {
   padding: 1.25rem;
   position: absolute;
   bottom:var(--lg);
@@ -19,6 +19,12 @@
   color:var(--text-color);
   font-size: 1.25rem;
 }
+.shop-btn{
+  background-color:var(--secondary-color);
+  color:var(--text-color);
+  border:none;
+}
+
 @media screen and (max-width: 500px) {
   .hero-btn {
     bottom: var(--md);
