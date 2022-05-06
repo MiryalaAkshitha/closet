@@ -7,7 +7,6 @@ export const Navbar=()=>{
       <div className="nav-container">
         <nav className="nav-wrapper">
           <div className="title">CLOSET !!</div>
-          {/* <i className="fas fa-bars drop-down"></i> */}
           <div className="nav-pills">
             <input
               className="nav-input"

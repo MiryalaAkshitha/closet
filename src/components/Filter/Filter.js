@@ -42,7 +42,7 @@ export const Filter = () => {
             </label>
 
 
-            <label for="category-two">
+            <label htmlFor="category-two">
               <input
                 type="checkbox"
                 id="cateogory-two"

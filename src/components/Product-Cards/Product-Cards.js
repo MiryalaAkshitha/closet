@@ -1,5 +1,5 @@
 import { useEffect , useState } from 'react';
-import axios from "axios";
+
 
 
 import {useProduct} from "../../context/Productcontext.js";
@@ -9,23 +9,23 @@ export  const ProductCards = () => {
     useEffect(()=>{
        productState.products.length===0 && 
        getData();
-       console.log(productState);
     },[])
     const sortedData=sortData(productState.products,productState.filters.priceSort);
     const filteredAndSortedData=filterData(sortedData,productState.filters.filterByCategory,productState.filters.filterByRating,productState.filters.filterByRange);
-    console.table(filteredAndSortedData)
+    
     return (
       <>
         <div className="product-listing-container">
           <div className="product-container">
             {filteredAndSortedData?.map((product) => (
+            
               <div className="product-card">
                 <img
                   className="product-img"
                   src={product.imageURL}
                   alt="image"
                 />
-                <i class="wishlist-tag far fa-heart"></i>
+                <i className="wishlist-tag far fa-heart"></i>
                 <div className="product-details">
                   <div className="product-rating">
                     {product.rating}

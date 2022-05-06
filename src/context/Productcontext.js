@@ -11,7 +11,7 @@ export function useProduct() {
 }
 
 export function ProductProvider({ children }) {
-  // const [items, setItems] = useState([]);
+
   const [productState,productDispatch] =useReducer(productReducer,initialState);
 
   const getData = () => {
