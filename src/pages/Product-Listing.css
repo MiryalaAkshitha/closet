@@ -1,3 +1,8 @@
 .product-listing-container{
     display:flex;
 }
+@media screen and (max-width: 540px) {
+    .product-listing-container{
+        flex-wrap:wrap;
+    }
+}
