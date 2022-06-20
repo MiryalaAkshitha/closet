@@ -20,7 +20,7 @@
   font-size: 1.25rem;
 }
 .shop-btn{
-  background-color:var(--secondary-color);
+  background-color:var(--primary-color);
   color:var(--text-color);
   border:none;
 }

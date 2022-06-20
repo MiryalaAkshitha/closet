@@ -34,6 +34,7 @@ export const getCartItemsHandler = function (schema, request) {
 
 export const addItemToCartHandler = function (schema, request) {
   const userId = requiresAuth.call(this, request);
+  console.log(userId);
   try {
     if (!userId) {
       return new Response(
@@ -44,7 +45,9 @@ export const addItemToCartHandler = function (schema, request) {
         }
       );
     }
+    console.log(userId);
     const userCart = schema.users.findBy({ _id: userId }).cart;
+    console.log(request.requestBody);
     const { product } = JSON.parse(request.requestBody);
     userCart.push({
       ...product,

@@ -1,4 +1,5 @@
 import "../Category/Category.css";
+import { Link } from "react-router-dom";
 
 import { useProduct } from "../../context/Productcontext";
 
@@ -14,10 +15,10 @@ export const Category = () => {
           alt="image"
         />
       
-        <button
+        <Link to ="/products"onClick={()=>productDispatch({type:"FILTER_BY_CATEGORY",payload:"kurthi"})}
           className="kurthi-btn">
           Shop Kurthis
-        </button>
+        </Link>
       
       </div>
       <div className="dresses-img-wrapper">

@@ -1,0 +1,11 @@
+.cart-page-container{
+    display:flex;
+    gap:300px;
+
+    
+}
+@media screen and (max-width: 540px) {
+    .cart-page-container{
+        flex-wrap:wrap;
+    }
+}
