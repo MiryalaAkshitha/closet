@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from "axios";
 
 import { useEffect } from 'react/cjs/react.production.min'
 import { useCart } from '../../context/cart-management/CartContext.js'
@@ -6,10 +7,27 @@ import "./CartCard.css";
 
 
 function CartCard() {
+  const token = localStorage.getItem("token")
     const {cartState,cartDispatch} = useCart()
     const totalPrice=cartState?.reduce((acc,curr)=>acc+curr.price,0)
     console.log(totalPrice)
-    console.log(cartState)
+  console.log(cartState)
+  const removeFromCart = async (product) => {
+    try {
+      const response = await axios.delete(`/api/user/cart/${product._id}`,
+        {
+          headers: { authorization: token }
+        })
+      if (response.status === 200) {
+        cartDispatch({
+          type: "DELETE_FROM_CART",
+          payload: response.data.cart,
+        })
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
   
   return (
     <div>
@@ -41,12 +59,7 @@ function CartCard() {
                   <div className="cart-product-price">Rs. {product.price}</div>
                   <button
                     className="remove-from-cart"
-                    onClick={() =>
-                      cartDispatch({
-                        type: "REMOVE_FROM_CART",
-                        payload: product._id,
-                      })
-                    }
+                   onClick={()=>removeFromCart(product)}
                   >
                     REMOVE FROM CART
                   </button>

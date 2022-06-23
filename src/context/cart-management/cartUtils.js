@@ -3,8 +3,10 @@ const initialCart=[]
 const cartReducer = (state, action) => {
   switch (action.type) {
     case "SET_CART":
+      case "DELETE_FROM_CART":
       console.log(action.payload)
       return action.payload;
+    
 
     // case "ADD_TO_CART":
     //   const isExist=state.find(item=>item._id===action.payload._id)

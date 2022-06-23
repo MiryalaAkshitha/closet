@@ -1,8 +1,8 @@
 export const authInitialState = {
-    token: null,
+    // token: null,
     isLoggedIn: false,
-    cart: [],
-    wishlist:[]
+    // cart: [],
+    // wishlist:[]
 }
  
 

@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import { useCart } from "../../context/cart-management/CartContext.js";
+import {useWishlist} from "../../context/wishlist-management/wishlistContext.js"
+
 
 import { useProduct } from "../../context/Productcontext.js";
 import "./Product-Cards.css";
-import { Action } from 'history';
+
 export const ProductCards = () => {
   const { productState, getData, sortData, filterData } = useProduct()
   const { cartState, cartDispatch } = useCart()
+  const { addToWishList, removeFromWishList ,wishlistState} = useWishlist()
+
 
   const AddToCartHandler = async (product) => {
     const token = JSON.parse(localStorage.getItem("user"));
@@ -58,7 +62,15 @@ export const ProductCards = () => {
                 src={product.imageURL}
                 alt="image"
               />
-              <i className="wishlist-tag far fa-heart"></i>
+              {wishlistState.wishlist.find((item) => item._id === product._id)
+                ? 
+                <i className="wishlist-tag far fa-heart" onClick={() => removeFromWishList(product)}></i>
+
+        
+                :
+                <i className="wishlist-tag far fa-heart" onClick={() => addToWishList(product)}></i>
+
+              }
               <div className="product-details">
                 <div className="product-rating">
                   {product.rating}

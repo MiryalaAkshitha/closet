@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { useCart } from "../../context/cart-management/CartContext";
+import { useWishlist } from "../../context/wishlist-management/wishlistContext";
 import { Link } from "react-router-dom";
 import { useEffect,useState } from "react";
 
@@ -10,6 +11,7 @@ export const Navbar = () => {
   
 
   const { cartState, cartDispatch } = useCart();
+  const {wishlistState} = useWishlist()
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("user"));
     if (token) {
@@ -33,9 +35,15 @@ export const Navbar = () => {
               className="nav-input"
               type="text"
               placeholder="what are you searching for ?"
-            />
+            /><Link to="/wishlist">
+              <div className="cart-container">
+                <button className="cart-btn">
+                  <i className="wishlist-icon fas fa-2x fa-heart"></i>
+                  <span className="cart-count">{wishlistState.wishlist?.length}</span>
+                </button>
+              </div>
+            </Link>
 
-            <i className="wishlist-icon fas fa-2x fa-heart"></i>
             <Link to="/cart">
               <div className="cart-container">
                 <button className="cart-btn">

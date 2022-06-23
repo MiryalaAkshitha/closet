@@ -12,8 +12,10 @@ const CartProvider=({children})=>{
             console.log(localCart);
             cartDispatch({type:"SET_CART",payload:localCart});
         }
-    },[]);
-    console.log(cartState)
+    }, []);
+    const token = JSON.parse(localStorage.getItem("user"));
+    console.log(token)
+    // console.log(cartState)
 return(
     <CartContext.Provider value={{cartState,cartDispatch}}>{children}</CartContext.Provider>
     )
