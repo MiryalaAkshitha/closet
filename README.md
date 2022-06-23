@@ -9,3 +9,7 @@ Individual product page,
 Cart Managment,
 Wishlist managment,
 Authentication
+
+
+## live website 
+https://closetforyou.netlify.app/
