@@ -2,6 +2,9 @@
 :root{
   --primary-color:#512e4f;
   --text-color:white;
+  --secondary-color:#ff7575;
+  --black-color:black;
+  --disabled-color: rgb(175,175,175);
   --xs:0.625rem;
   --sm:1.25rem;
   --md:2rem;

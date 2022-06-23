@@ -1,8 +1,31 @@
 import "./Navbar.css";
+import { useCart } from "../../context/cart-management/CartContext";
+import { useWishlist } from "../../context/wishlist-management/wishlistContext";
+import { Link } from "react-router-dom";
+import { useEffect,useState } from "react";
 
 
 
-export const Navbar=()=>{
+export const Navbar = () => {
+  const [user, setUser] = useState(false)
+  
+
+  const { cartState, cartDispatch } = useCart();
+  const {wishlistState} = useWishlist()
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("user"));
+    if (token) {
+  setUser(true)
+    } else {
+      setUser(false)
+    }
+      
+  }, [])
+  const logoutHandler = () => {
+    localStorage.clear("user")
+    setUser(false)
+  }
+  
     return (
       <div className="nav-container">
         <nav className="nav-wrapper">
@@ -12,11 +35,26 @@ export const Navbar=()=>{
               className="nav-input"
               type="text"
               placeholder="what are you searching for ?"
-            />
-            {/* <i class="fas fa-search"></i>  */}
-            <i className="wishlist-icon fas fa-2x fa-heart"></i>
-            <i className="bag-icon fas fa-2x fa-shopping-bag"></i>
-            <div className="nav-login">login</div>
+            /><Link to="/wishlist">
+              <div className="cart-container">
+                <button className="cart-btn">
+                  <i className="wishlist-icon fas fa-2x fa-heart"></i>
+                  <span className="cart-count">{wishlistState.wishlist?.length}</span>
+                </button>
+              </div>
+            </Link>
+
+            <Link to="/cart">
+              <div className="cart-container">
+                <button className="cart-btn">
+                  <i className="bag-icon fas fa-2x fa-shopping-bag"></i>
+                  <span className="cart-count">{cartState?.length}</span>
+                </button>
+              </div>
+            </Link>
+            {user ? <button onClick={logoutHandler}>logout</button> : <Link to="/login">
+              <div className="nav-login">login</div>
+            </Link>}
 
             <img
               className="avatar"

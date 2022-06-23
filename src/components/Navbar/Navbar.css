@@ -64,3 +64,23 @@
 .nav-login:hover{
     border-bottom: 2px solid var(--primary-color);
 }
+.cart-container{
+  position:relative;
+}
+.cart-count{
+
+  position:absolute;
+  height:18px;
+  width:18px;
+  border-radius:50%;
+  background-color:var(--secondary-color);
+  color:var(--balck-color);
+  font-weight:bold;
+  
+  
+}
+.cart-btn{
+  outline:none;
+  border:none;
+  padding:0px;
+}

@@ -1,0 +1,32 @@
+.cart-heading{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding:5px;
+    border-bottom: 2px solid var(--secondary-color);
+
+}
+
+.total-price{
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+}
+.cart-price-card{
+
+    display:flex;
+    height:200px;
+    width:400px;
+    flex-direction:column;
+    padding:10px;
+    border:1px solid var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.proceed-to-pay{
+    background-color:var(--primary-color);
+    color:white;
+    width:fit-content;
+}

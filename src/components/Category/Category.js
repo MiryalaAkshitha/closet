@@ -1,4 +1,5 @@
 import "../Category/Category.css";
+import { Link } from "react-router-dom";
 
 import { useProduct } from "../../context/Productcontext";
 
@@ -14,10 +15,10 @@ export const Category = () => {
           alt="image"
         />
       
-        <button
+        <Link to ="/products"onClick={()=>productDispatch({type:"FILTER_BY_CATEGORY",payload:"kurthi"})}
           className="kurthi-btn">
           Shop Kurthis
-        </button>
+        </Link>
       
       </div>
       <div className="dresses-img-wrapper">
@@ -26,7 +27,10 @@ export const Category = () => {
           src="https://www.deebaco.com/blog/wp-content/uploads/2021/09/Floral-Blog.jpg"
           alt="image"
         />
-        <button className="dresses-btn">Shop Dresses</button>
+        <Link to="/products" onClick={() => productDispatch({ type: "FILTER_BY_CATEGORY", payload: "floral-dress" })}
+          className="kurthi-btn">
+          Shop Florals
+        </Link>
       </div>
       <div className="tops-img-wrapper">
         <img
@@ -34,7 +38,10 @@ export const Category = () => {
           src="https://cdn.zivame.com/media/mimages/category/SCB_Apparel_By-Category_tops-and-t-shirts-CBz_15_03.jpg"
           alt="image"
         />
-        <button className="tops-btn">Shop Tops</button>
+        <Link to="/products" onClick={() => productDispatch({ type: "FILTER_BY_CATEGORY", payload: "Tops" })}
+          className="kurthi-btn">
+          Shop Tops
+        </Link>
       </div>
     </div>
   );
